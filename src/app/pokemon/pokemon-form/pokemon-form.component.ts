@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-pokemon-form',
   templateUrl: './pokemon-form.component.html',
-  styles: [
-  ]
+  styleUrls: ['./pokemon-form.component.scss']
 })
 export class PokemonFormComponent implements OnInit{
   @Input() pokemon: Pokemon;
@@ -51,6 +50,7 @@ export class PokemonFormComponent implements OnInit{
 
  onSubmit() {
   console.log('Submit form !');
+  console.log(this.pokemon.id);
   this.router.navigate(['/pokemons', this.pokemon.id]);
  }
 }
